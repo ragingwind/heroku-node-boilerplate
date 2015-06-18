@@ -1,0 +1,18 @@
+{
+  "name": "bare-node-heroku",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "export $(cat .env) && mocha -t 9000",
+    "key": "echo \"Please input secret key:\" && read key && echo KEY=$key > .env",
+    "serve": "foreman start web",
+    "deploy": "git push heroku master"
+  },
+  "author": "ragingwind",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.4",
+    "got": "^3.2.0"
+  }
+}
