@@ -6,13 +6,15 @@
   "scripts": {
     "test": "export $(cat .env) && mocha -t 9000",
     "key": "echo \"Please input secret key:\" && read key && echo KEY=$key > .env",
-    "serve": "foreman start web",
-    "deploy": "git push heroku master"
+    "start": "nf start web",
+    "push": "git push heroku master"
   },
   "author": "ragingwind",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.12.4",
-    "got": "^3.2.0"
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "foreman": "^1.4.1"
   }
 }
