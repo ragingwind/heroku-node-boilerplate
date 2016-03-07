@@ -5,7 +5,9 @@ var app = express();
 var port = process.env.PORT;
 
 app.get('/', function (req, res) {
-  res.json(200, data);
+  res.json(200, {
+    data: 'hello world'
+  });
 });
 
 var server = app.listen(port, function() {
